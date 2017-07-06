@@ -1,0 +1,19 @@
+<launch>
+  <!-- Launch the zed wrapper -->
+  <arg name="svo_file" default=""/>
+  <arg name="zed_id" default="0"/>
+
+  <group ns="zed">
+    <include file="$(find zed_wrapper)/launch/zed_camera.launch">
+      <arg name="svo_file" value="$(arg svo_file)" />
+      <arg name="zed_id" value="$(arg zed_id)" />
+    </include>
+  </group>
+
+  <!-- Launch ORB_SLAM2 -->
+  <node name="ORB_SLAM2" pkg="ORB_SLAM2" type="Stereo" args="$(find ORB_SLAM2)/Vocabulary/ORBvoc.txt">
+    <remap from="/zed/left/image_rect_color" to="/cam0/image_raw">
+    <remap from="/zed/right/image_rect_color" to="/cam1/image_raw">
+  </node>
+
+</launch>
