@@ -1,0 +1,8 @@
+<launch>
+
+  <!-- Launch ORB_SLAM2 -->
+  <node name="ORB_SLAM2_CUDA" pkg="ORB_SLAM2_CUDA" type="Mono" args="$(find ORB_SLAM2_CUDA)/../../../Vocabulary/ORBvoc.txt /usr/local/zed/settings/dst-zed-calibration-profile.yaml">
+    <remap to="/zed/left/image_rect_color" from="/camera/image_raw" />
+  </node>
+
+</launch>
