@@ -18,6 +18,6 @@
     </include>
   </group>
 
-<node name="Mono" pkg="ORB_SLAM2" type="Mono" output="screen" args="$(find ORB_SLAM2_CUDA)/../../../Vocabulary/ORBvoc.txt $(find camera_profile)/Intel_RealSense_R200.yaml">
+<node name="Mono" pkg="ORB_SLAM2_CUDA" type="Mono" output="screen" args="$(find ORB_SLAM2_CUDA)/../../../Vocabulary/ORBvoc.txt $(find camera_profile)/Intel_RealSense_R200.yaml">
 </node>
 </launch>
