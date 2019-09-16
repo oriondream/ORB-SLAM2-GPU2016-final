@@ -1,6 +1,6 @@
 <launch>
   <!-- Launch ORB_SLAM2 -->
-  <node name="ORB_SLAM2" pkg="ORB_SLAM2" type="Mono" args="$(find ORB_SLAM2)/../../../Vocabulary/ORBvoc.txt $(find ORB_SLAM2)/logitech-c920.yaml">
+  <node name="ORB_SLAM2" pkg="ORB_SLAM2_CUDA" type="Mono" args="$(find ORB_SLAM2_CUDA)/../../../Vocabulary/ORBvoc.txt $(find ORB_SLAM2_CUDA)/logitech-c920.yaml">
     <remap from="/camera/image_raw" to="/usb_cam/image_raw" />
   </node>
   <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
