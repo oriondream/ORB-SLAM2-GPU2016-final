@@ -66,6 +66,7 @@ set(LIBS
     ${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2_CUDA.so
     ${CUDA_LIBRARIES}
     /usr/local/cuda/lib64/libnvToolsExt.so
+    -lboost_system
 )
 
 # Node for monocular camera
