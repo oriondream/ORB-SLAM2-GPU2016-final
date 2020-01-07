@@ -39,7 +39,7 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/../../../cmake_modules)
 
-find_package(OpenCV 3.4.0 NO_MODULE REQUIRED PATHS /usr/local/opencv3.4 NO_DEFAULT_PATH)
+find_package(OpenCV 3.4.0 NO_MODULE REQUIRED PATHS /usr/local/share NO_DEFAULT_PATH)
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
 
